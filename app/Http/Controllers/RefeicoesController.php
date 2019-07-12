@@ -24,7 +24,7 @@ class RefeicoesController extends Controller
 	}
 	
 	public function update(Request $request, $id){
-		$refeicoes = Refeicoes::findOrFail($id);
+		$refeicoes = Refeicoes::findOrFail($request->input('idRef'));
 		$refeicoes = $refeicoes->update($request->all());
 		return response()->json($refeicoes,200);
 	}

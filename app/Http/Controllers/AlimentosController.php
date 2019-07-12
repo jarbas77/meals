@@ -23,6 +23,7 @@ class AlimentosController extends Controller
 		return response()->json($alimentos,201);
 	}
 	
+		
 	public function update(Request $request){
 		$alimentos = Alimentos::findOrFail($request->input('idAlim'));
 		$alimentos = $alimentos->update($request->all());
