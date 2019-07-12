@@ -11,4 +11,9 @@ class Tiporef extends Model
     protected $fillable = array('nomeTipo');
 	
 	public $timestamp =false;
+	
+	public function tipoRef()
+    {
+         return $this->hasMany('App\Refeicoes');
+    }
 }
