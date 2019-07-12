@@ -12,7 +12,7 @@ class Refeicoes extends Model
 	public $timestamp =true;
 	
 	public function idTipo(){
-		return $this->belongsTo('App\Tiporef');
+		return $this->belongsToMany('App\Tiporef');
 		}
 	
 }
