@@ -24,7 +24,7 @@ class AlirefController extends Controller
 	}
 	
 	public function update(Request $request, $id){
-		$aliref = Aliref::findOrFail($id);
+		$aliref = Aliref::findOrFail($request->input('idRef');
 		$aliref = $aliref->update($request->all());
 		return response()->json($aliref,200);
 	}

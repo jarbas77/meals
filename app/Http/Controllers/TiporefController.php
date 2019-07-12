@@ -26,7 +26,7 @@ class TiporefController extends Controller
 	
 	//PUT - Update
 	public function update(Request $request, $id){
-		$tiporef = Tiporef::findOrFail($id);
+		$tiporef = Tiporef::findOrFail($request->input('idTipo'));
 		$tiporef = $tiporef->update($request->all());
 		return response()->json($tiporef,200);
 	}
